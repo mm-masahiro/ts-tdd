@@ -9,8 +9,8 @@ export class FizzBuzzExecutor {
 
 	public execute(i: number, j: number): void {
 		const fizzBuzz = new FizzBuzz();
-		for (let n = i; i <= j; i++) {
-			fizzBuzz.execute(i);
+		for (i; i <= j; i++) {
+			console.log(fizzBuzz.execute(i));
 		}
 	}
 }
