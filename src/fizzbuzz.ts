@@ -9,6 +9,5 @@ export class FizzBuzz {
 		} else {
 			return `${i}`;
 		}
-		// return i % 5 == 0 ? "Buzz" : "Fizz";
 	}
 }

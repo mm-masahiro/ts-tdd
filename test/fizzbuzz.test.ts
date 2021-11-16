@@ -16,15 +16,15 @@ describe("FizzBuzzは", () => {
 	});
 })
 
-// describe("FizzBuzzExcutorは", () => {
-// 	test("1から100までFizzBuzzする", () => {
-// 		const fizzBuzz = {} as FizzBuzz;
-// 		const execute = jest.fn();
+describe("FizzBuzzExcutorは", () => {
+	test("1から100までFizzBuzzする", () => {
+		const fizzBuzz = {} as FizzBuzz;
+		const execute = jest.fn();
 
-// 		fizzBuzz.execute = execute;
-// 		new FizzBuzzExecutor(fizzBuzz).execute(1, 100)
+		fizzBuzz.execute = execute;
+		new FizzBuzzExecutor(fizzBuzz).execute(1, 100)
 
-// 		// toHaveBeenCalledTimesはモック化された対象の関数が何回呼び出しされたかを確認することが出来るMatcher
-// 		expect(execute).toHaveBeenCalledTimes(100);
-// 	})
-// })
+		// toHaveBeenCalledTimesはモック化された対象の関数が何回呼び出しされたかを確認することが出来るMatcher
+		expect(execute).toHaveBeenCalledTimes(100);
+	})
+})
