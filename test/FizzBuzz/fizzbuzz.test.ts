@@ -1,5 +1,6 @@
-import { FizzBuzz } from "../src/fizzbuzz";
-import { FizzBuzzExecutor } from "../src/fizBuzzExecutor";
+import { FizzBuzz } from "../../src/FizzBuzz/fizzbuzz";
+import { FizzBuzzExecutor } from "../../src/FizzBuzz/fizBuzzExecutor";
+jest.mock('../../src/FizzBuzz/fizBuzzExecutor')
 
 describe("FizzBuzzは", () => {
 	test("3の倍数を受け取るとFizzを返す", () => {
@@ -22,9 +23,9 @@ describe("FizzBuzzExcutorは", () => {
 		const execute = jest.fn();
 
 		fizzBuzz.execute = execute;
-		new FizzBuzzExecutor(fizzBuzz).execute(1, 100)
+		const fizzBuzzExecutor = new FizzBuzzExecutor(fizzBuzz).execute(1, 100)
 
 		// toHaveBeenCalledTimesはモック化された対象の関数が何回呼び出しされたかを確認することが出来るMatcher
-		expect(execute).toHaveBeenCalledTimes(100);
+		expect(FizzBuzzExecutor).toHaveBeenCalledTimes(1);
 	})
 })

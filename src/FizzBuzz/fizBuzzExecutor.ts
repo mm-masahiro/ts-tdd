@@ -1,4 +1,4 @@
-import { FizzBuzz } from "../src/fizzbuzz";
+import { FizzBuzz } from "./fizzbuzz";
 
 export class FizzBuzzExecutor {
 	protected obj: Object
@@ -7,10 +7,10 @@ export class FizzBuzzExecutor {
 		this.obj = obj;
 	}
 
-	public execute(i: number, j: number): void {
+	public execute(i: number, j: number): String | undefined {
 		const fizzBuzz = new FizzBuzz();
 		for (i; i <= j; i++) {
-			console.log(fizzBuzz.execute(i));
+			return fizzBuzz.execute(i);
 		}
 	}
 }
